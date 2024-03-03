@@ -99,5 +99,14 @@ Ext.define('MsTraining.view.main.Main', {
         bind: {
             html: '{loremIpsum}'
         }
-    }]
+    }, {
+        title: 'Posts',
+        iconCls: 'fa-user',
+        items: [
+            {
+                xtype: 'postgrid'
+            }
+        ]
+    },
+    ]
 });
