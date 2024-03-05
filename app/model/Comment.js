@@ -16,7 +16,7 @@ Ext.define('MsTraining.model.Comment', {
     },
     validators: {
        
-        name: [ { type: 'length', min: 7 }],
+        name: [{ type: 'length', min: 7 }],
     }
 
 
@@ -28,7 +28,7 @@ Ext.define('MsTraining.model.Comment', {
             // console.log('Post: ' + post.get('title'));
             post.comments(function (comments) {
                 comments.each(function (comment) {
-                    //console.log('Comment: ' + comment.get('name') + "commentId" + comment.get("id"));
+                    // console.log('Comment: ' + comment.get('name') + "commentId" + comment.get("id"));
                 });
             });
         }
@@ -37,10 +37,8 @@ Ext.define('MsTraining.model.Comment', {
     MsTraining.model.Comment.load(1, {
         callback: function (comment) {
             comment.getPost(function (post) {
-                console.log('Got post from comment: ' + post.get('title'));
+                // console.log('Got post from comment: ' + post.get('title'));
             });
         }
     });
-   
-
 })

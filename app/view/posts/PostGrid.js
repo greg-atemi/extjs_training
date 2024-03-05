@@ -4,7 +4,7 @@ Ext.define('MsTraining.view.posts.PostGrid', {
     controller: 'postgridviewcontroller',
     store: {
         type: 'posts'
-    },
+    },      
     tbar: [{
         text: 'Add Post',
         listeners: {
@@ -16,12 +16,18 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         listeners: {
             click: 'onFormFieldsClicked'
         }
+    },
+    {
+        text: 'Layouts',
+        listeners: {
+            click: 'onLayoutsClicked'
+        }
     }],
     columns: [
         { dataIndex: 'id', text: 'ID' },
+        { dataIndex: 'userId', text: 'User ID', sortable: false, hidden: false },
         { dataIndex: 'title', text: 'Title', flex: 1 },
         { dataIndex: 'body', text: 'Body', flex: 2, sortable: false },
-        { dataIndex: 'userId', text: 'User ID', sortable: false, hidden: true }
     ],
     selModel: {
         selType: 'checkboxmodel',

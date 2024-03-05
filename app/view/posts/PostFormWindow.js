@@ -13,7 +13,7 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
         reference: 'postform',
         itemId:'postform',
         jsonSubmit:true,
-        bodyPadding: 10,
+        bodyPadding: 16,
         modelValidation: true,
         items: [
             {

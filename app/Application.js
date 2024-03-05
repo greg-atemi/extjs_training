@@ -30,6 +30,6 @@ Ext.define(
       },
     },
     function () {
-      console.log("On th callback");
+      // console.log("On th callback");
     }
   );

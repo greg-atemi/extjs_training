@@ -15,5 +15,5 @@ Ext.define("MsTraining.view.demo.CustomWindow",{
     var wd = Ext.create({
       xtype: "customwindow",
     });
-    wd.show();
+    // wd.show();
 })

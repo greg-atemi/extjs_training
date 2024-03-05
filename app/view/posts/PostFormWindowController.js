@@ -10,11 +10,14 @@ Ext.define('MsTraining.view.posts.PostFormController', {
     },
     onSaveClick: function (btn, e, eOpts) {
         let window = this.getView();
-        console.log(window);
+        // console.log("Window:");
+        // console.log(window);
         let references = window.getReferences();
-       
+        // console.log("References:");
+        // console.log(references);
         let form = references['postform'].getForm();
-
+        // console.log("Form:");
+        // console.log(form);
         if(form.isValid()){
             //send ajax request to submit
             form.submit({
@@ -22,7 +25,7 @@ Ext.define('MsTraining.view.posts.PostFormController', {
                 url:'https://jsonplaceholder.typicode.com/posts',
                 success:function(form,action){
                     Ext.Msg.alert('Success', action.result.msg);
-                    // add the record tpo the post store -> post grid
+                    // add the record to the post store -> post grid
                 },
                 failure:function(form,action){
                     // handle failures

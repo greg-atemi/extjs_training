@@ -11,8 +11,13 @@ Ext.define('MsTraining.view.posts.PostGridViewController',{
         wd.show();
     }, 
     onFormFieldsClicked:function(btn,e,eOpts){
-      Ext.create({
-            xtype: "formfieldsdemo",
-        });
-    }
+        Ext.create({
+              xtype: "formfieldsdemo",
+          });
+      }, 
+    onLayoutsClicked:function(btn,e,eOpts){
+        Ext.create({
+            xtype: "accordionlayout",
+          });
+      },
 })
