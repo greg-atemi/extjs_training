@@ -11,6 +11,6 @@ Ext.define(
     }, // Configuration/ properties
     function () {
       var city = Ext.create("MsTraining.model.City");
-      console.log(city);
+      // console.log(city);
     }
   );

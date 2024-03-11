@@ -11,7 +11,7 @@ Ext.define("MsTraining.model.Person",
 
     eat: function (foodType) {
       MsTraining.util.Util.logInfo(this.name + " is eating: " + foodType)
-      console.log(MsTraining.util.Math.PI);
+      // console.log(MsTraining.util.Math.PI);
      
     },
   },

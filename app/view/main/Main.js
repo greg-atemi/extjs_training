@@ -12,7 +12,6 @@ Ext.define('MsTraining.view.main.Main', {
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
-
         'MsTraining.view.main.MainController',
         'MsTraining.view.main.MainModel',
         'MsTraining.view.main.List'
@@ -73,40 +72,37 @@ Ext.define('MsTraining.view.main.Main', {
             }
         }
     },
-
+    
     items: [{
+        title: 'Static Data Management',
+        iconCls: 'fa-users',
+        items: [
+            {
+                xtype: 'parentpanel'
+            }
+        ]
+    },{
+        title: 'Layouts',
+        iconCls: 'pictos-box',
+        items: [
+            {
+                xtype: 'layoutsgrid'
+            }
+        ]
+    },
+    {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
             xtype: 'mainlist'
         }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
+    },
+    {
         title: 'Settings',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Posts',
-        iconCls: 'fa-user',
         items: [
-            {
-                xtype: 'postgrid'
-            }
+
         ]
-    },
-    ]
+    }]
 });
