@@ -1,73 +1,80 @@
 Ext.define('MsTraining.view.layouts.CheckoutForm', {
     extend: 'Ext.window.Window',
     xtype: 'checkoutform',
-    title: "Complete Checkout Form",
-    height: 600,
+    title: "Checkout Form",
+    height: 640,
     width: 900,
     autoShow: true,
     closable: true,
     modal: true,
     layout: 'fit',
+    bodyPadding: 24,
+    scrollable: true,
     items: [
         {
             xtype: 'form',
-            layout: 'column',
+            layout: 'auto',
             items: [
                 {
-                    columnWidth: 0.5,
-                    margin: '5 5 5 5',
+                    xtype: 'form',
+                    layout: 'hbox',
                     items: [
                         {
-                            xtype: 'fieldset',
-                            title: 'Contact Information',
-                            layout: 'anchor',
-                            defaults: {
-                                anchor: '100%'
-                            },
+                            margin: '5 5 5 5',
                             items: [
                                 {
-                                    xtype: 'fieldcontainer',
-                                    labelWidth: 100,
-                                    layout: 'hbox',
-                                    fieldLabel: 'Name',
-                                    items: [{
-                                        xtype: 'textfield',
-                                        emptyText: 'First',
-                                        flex: 1
+                                    xtype: 'fieldset',
+                                    title: 'Contact Information1',
+                                    layout: 'anchor',
+                                    defaults: {
+                                        anchor: '100%'
                                     },
-                                    {
-                                        xtype: 'splitter'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        emptyText: 'Last',
-                                        flex: 1
-                                    },]
-                                },
-                                {
-                                    layout: 'hbox',
-                                    xtype: 'container',
-
-                                    items: [{
-                                        xtype: 'textfield',
-                                        fieldLabel: 'Email Address',
-                                        name: 'email',
-                                        vtype: 'email',
-                                        flex: 1,
-                                        allowBlank: false
-                                    }, {
-                                        fieldLabel: 'Phone Number',
-                                        xtype: 'textfield',
-                                        name: 'phone',
-                                        labelWidth: 100,
-                                        flex: 1,
-                                        emptyText: 'xxx-xxx-xxxx',
-                                        maskRe: /[\d\-]/,
-                                        regex: /^\d{3}-\d{3}-\d{4}$/,
-                                        regexText: 'Must be in the format xxx-xxx-xxxx'
-                                    }
+                                    items: [
+                                        {
+                                            xtype: 'fieldcontainer',
+                                            labelWidth: 100,
+                                            layout: 'hbox',
+                                            fieldLabel: 'Name',
+                                            items: [{
+                                                xtype: 'textfield',
+                                                emptyText: 'First',
+                                                flex: 1
+                                            },
+                                            {
+                                                xtype: 'splitter'
+                                            },
+                                            {
+                                                xtype: 'textfield',
+                                                emptyText: 'Last',
+                                                flex: 1
+                                            },]
+                                        },
+                                        {
+                                            xtype: 'container',
+                                            items: [
+                                            {
+                                                xtype: 'textfield',
+                                                fieldLabel: 'Email Address',
+                                                name: 'email',
+                                                flex: 1,
+                                                vtype: 'email',
+                                                allowBlank: false
+                                            }, 
+                                            {
+                                                fieldLabel: 'Phone Number',
+                                                xtype: 'textfield',
+                                                name: 'phone',
+                                                labelWidth: 100,
+                                                flex: 2,
+                                                emptyText: 'xxx-xxx-xxxx',
+                                                maskRe: /[\d\-]/,
+                                                regex: /^\d{3}-\d{3}-\d{4}$/,
+                                                regexText: 'Must be in the format xxx-xxx-xxxx'
+                                            }
+                                            ]
+                                        }
                                     ]
-                                }
+                                },
                             ]
                         },
                         {
@@ -86,7 +93,7 @@ Ext.define('MsTraining.view.layouts.CheckoutForm', {
                                     allowBlank: false,
                                 },
                                 {
-                                    layout: 'hbox',
+                                    layout: 'auto',
                                     xtype: 'container',
                                     items: [{
                                         xtype: 'textfield',
@@ -130,7 +137,7 @@ Ext.define('MsTraining.view.layouts.CheckoutForm', {
                                         regex: /^\d{5}(\-\d{4})?$/,
                                         regexText: 'Must be in the format xxxxx or xxxxx-xxxx',
 
-                                       
+                                        
                                     }
                                     ]
                                 }
@@ -139,65 +146,69 @@ Ext.define('MsTraining.view.layouts.CheckoutForm', {
                     ]
                 },
                 {
-                    columnWidth: 0.5,
-                    margin: '5 5 5 5',
+                    xtype: 'fieldset',
+                    title: 'Order details',
+                    layout: 'anchor',
+                    defaults: {
+                        anchor: '100%'
+                    },
                     items: [
                         {
-                            xtype: 'fieldset',
-                            title: 'Contact Information',
-                            layout: 'anchor',
-                            defaults: {
-                                anchor: '100%'
-                            },
+                            xtype: 'fieldcontainer',
+                            labelWidth: 100,
+                            layout: 'hbox',
+                            fieldLabel: 'Order ID',
                             items: [
                                 {
-                                    xtype: 'fieldcontainer',
-                                    labelWidth: 100,
-                                    layout: 'hbox',
-                                    fieldLabel: 'Name',
-                                    items: [{
-                                        xtype: 'textfield',
-                                        emptyText: 'First',
-                                        flex: 1
-                                    },
-                                    {
-                                        xtype: 'splitter'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        emptyText: 'Last',
-                                        flex: 1
-                                    },]
+                                    xtype: 'textfield',
+                                    flex: 0.75
                                 },
                                 {
-                                    layout: 'hbox',
-                                    xtype: 'container',
-
-                                    items: [{
-                                        xtype: 'textfield',
-                                        fieldLabel: 'Email Address',
-                                        name: 'email',
-                                        vtype: 'email',
-                                        flex: 1,
-                                        allowBlank: false
-                                    }, {
-                                        fieldLabel: 'Phone Number',
-                                        xtype: 'textfield',
-                                        name: 'phone',
-                                        labelWidth: 100,
-                                        flex: 1,
-                                        emptyText: 'xxx-xxx-xxxx',
-                                        maskRe: /[\d\-]/,
-                                        regex: /^\d{3}-\d{3}-\d{4}$/,
-                                        regexText: 'Must be in the format xxx-xxx-xxxx'
-                                    }
-                                    ]
+                                    xtype: 'splitter'
+                                },
+                                {
+                                    fieldLabel: 'Order Date',
+                                    xtype: 'textfield',
+                                    flex: 1
+                                },
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            labelWidth: 100,
+                            layout: 'hbox',
+                            fieldLabel: 'Total',
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    flex: 0.75
+                                },
+                                {
+                                    xtype: 'splitter'
+                                },
+                                {
+                                    fieldLabel: 'Tax',
+                                    xtype: 'textfield',
+                                    flex: 1
+                                },
+                            ]
+                        },
+                        {
+                            xtype: 'fieldcontainer',
+                            labelWidth: 100,
+                            layout: 'hbox',
+                            fieldLabel: 'Grand Total',
+                            items: [
+                                {
+                                    xtype: 'textfield',
+                                    flex: 1
                                 }
                             ]
                         }
                     ]
-                },
+                }
             ]
         }
     ]
-})
+}
+)

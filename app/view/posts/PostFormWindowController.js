@@ -22,7 +22,7 @@ Ext.define('MsTraining.view.posts.PostFormController', {
             //send ajax request to submit
             form.submit({
                 method:'POST',
-                url:'https://jsonplaceholder.typicode.com/posts',
+                url:'http://localhost:3000/posts',
                 success:function(form,action){
                     Ext.Msg.alert('Success', action.result.msg);
                     // add the record to the post store -> post grid
