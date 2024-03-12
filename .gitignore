@@ -5,7 +5,8 @@ modern.json*
 .sencha
 /ext
 sencha-error*
-
+/classic
+/modern
 
 # Eclipse
 .classpath
