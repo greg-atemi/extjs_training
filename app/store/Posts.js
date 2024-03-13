@@ -10,4 +10,5 @@ Ext.define('MsTraining.store.Posts',{
         property: 'userId',
         value: '10'
     } */
+    autoLoad: true
 })

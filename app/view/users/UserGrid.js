@@ -7,7 +7,7 @@ Ext.define('MsTraining.view.users.UserGrid', {
     store: {
         type: 'users'
     },
-    height: 520,
+    height: 800,
     plugins: {
         cellediting: {
             clicksToEdit: 1

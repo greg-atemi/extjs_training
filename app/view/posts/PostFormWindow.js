@@ -3,8 +3,8 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
     xtype: 'postformwindow',
     controller:'postformcontroller',
     title: "Add Post",
-    height: 360,
-    width: 360,
+    height: 250,
+    width: 520,
     autoShow: true,
     closable: true,
     modal: true,
@@ -13,8 +13,9 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
         reference: 'postform',
         itemId:'postform',
         jsonSubmit:true,
-        bodyPadding: 24,
+        bodyPadding: 10,
         modelValidation: true,
+        layout: 'form',
         items: [
             {
                 allowBlank: true,
@@ -24,6 +25,14 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
                 fieldLabel: 'Post ID',
                 name: '_id',
                 emptyText: 'Post id'
+            },
+            {
+                allowBlank: true,
+                xtype: 'datefield',
+                fieldLabel: 'DOB',
+                name: 'dateOfBirth',
+                emptyText: 'Date of Birth',
+                maxValue: Ext.Date.add(new Date(), Ext.Date.YEAR,-18)
             },
             {
                 allowBlank: false,

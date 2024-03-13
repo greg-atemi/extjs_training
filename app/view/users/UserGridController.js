@@ -23,12 +23,12 @@ Ext.define('MsTraining.view.users.UserGridController', {
     onShowDetails:function(btn,e,eOpts){
         let userGrid = this.getView();
         let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
-        if(userGrid.getHeight() === 1200){
-            userGrid.setHeight(600)
-            lowerPanel.setHeight(600)
+        if(userGrid.getHeight() === 800){
+            userGrid.setHeight(400)
+            lowerPanel.setHeight(400)
             btn.setText("Hide Details")
         }else{
-            userGrid.setHeight(1200)
+            userGrid.setHeight(800)
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }

@@ -11,5 +11,6 @@ Ext.define('MsTraining.store.Todos', {
             totalProperty: 'totalCount'
         }
     },
+    autoLoad: true
 
 })
