@@ -32,9 +32,6 @@ Ext.define('MsTraining.view.posts.PostGridViewController', {
             xtype: "accordionlayout",
         });
     },
-    onEditClicked: function (btn, e, eOpts) {
-
-    },
     onDeleteClicked:function(btn, e, eOpts){
         let me=this;
         let record = this.getSelectedRecordByXType('postgrid');
