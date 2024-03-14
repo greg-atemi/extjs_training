@@ -91,6 +91,15 @@ Ext.define('MsTraining.view.main.Main', {
         ]
     },
     {
+        title: 'Posts',
+        iconCls: 'pictos-box',
+        items: [
+            {
+                xtype: 'postgrid'
+            }
+        ]
+    },
+    {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
