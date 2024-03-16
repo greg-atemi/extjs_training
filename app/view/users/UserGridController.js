@@ -42,6 +42,19 @@ Ext.define('MsTraining.view.users.UserGridController', {
         console.log(record.get('username'));
     },
     onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
-       
+        // Function for on right click to create a small grid with options
+        // Ext.create('Ext.menu.Menu', {
+        //     width: 100,
+        //     plain: true,
+        //     floating: false,  // usually you want this set to True (default)
+        //     renderTo: Ext.getBody(),  // usually rendered by it's containing component
+        //     items: [{
+        //         text: 'plain item 1'
+        //     }, {
+        //         text: 'plain item 2'
+        //     }, {
+        //         text: 'plain item 3'
+        //     }]
+        // });
     }
 })
