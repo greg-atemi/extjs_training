@@ -100,6 +100,24 @@ Ext.define('MsTraining.view.main.Main', {
         ]
     },
     {
+        title: 'Students',
+        iconCls: 'pictos-box',
+        items: [
+            {
+                xtype: 'studentsgrid'
+            }
+        ]
+    },
+    // {
+    //     title: 'Departments',
+    //     iconCls: 'pictos-box',
+    //     items: [
+    //         {
+    //             xtype: 'departmentgrid'
+    //         }
+    //     ]
+    // },
+    {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
