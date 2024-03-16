@@ -1,8 +1,9 @@
 Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
     extend: 'Ext.window.Window',
+    title: "Model Binding",
     xtype: 'modelbindingform',
     controller: 'modelbindingformcontroller',
-    height: 600,
+    height: 480,
     width: 520,
     autoShow: true,
     closable: true,
@@ -66,6 +67,28 @@ Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
                     change:'onStateSelectionChange'
                 }
             },
+            // The subcounty field should be auto loaded 
+            //depending on the value of the Selected State
+            {
+                xtype: 'combobox',
+                reference: 'states',
+                publishes: 'value',
+                fieldLabel: 'Select Sub County',
+                displayField: 'state',
+               
+                store: {
+                    type: 'states'
+                },
+                minChars: 0,
+                queryMode: 'local',
+                typeAhead: true,
+                valueField:'abbr',
+                
+                listeners:{
+                    select:'onStateSelected',
+                    change:'onStateSelectionChange'
+                }
+            }
             
             ]
         }
