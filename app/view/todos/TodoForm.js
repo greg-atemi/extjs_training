@@ -2,7 +2,7 @@ Ext.define('MsTraining.view.todos.TodoForm', {
     extend: 'Ext.window.Window',
     xtype: 'todoform',
     controller:'todoformcontroller',
-    height: 300,
+    height: 400,
     width: 520,
     autoShow: true,
     closable: true,
