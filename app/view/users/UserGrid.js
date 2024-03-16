@@ -9,15 +9,12 @@ Ext.define('MsTraining.view.users.UserGrid', {
     },
     height: 520,
     plugins: {
-        cellediting: {
-            clicksToEdit: 1
+        rowediting: {
+            clicksToEdit: 2
         }
     },
-    selModel: {
-        selType: 'cellmodel',
-    },
     columns: [
-            {xtype: 'rownumberer'},
+        // {xtype: 'rownumberer'},
         {
             dataIndex: '_id',
             text: 'ID'
@@ -67,7 +64,9 @@ Ext.define('MsTraining.view.users.UserGrid', {
             }
         }
     ],
-   
+    selModel: {
+        selType: 'checkboxmodel',
+    },
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true
