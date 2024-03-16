@@ -11,5 +11,4 @@ Ext.define('MsTraining.model.User', {
         'city',
         'zipcode',
     ],
-    
 })
